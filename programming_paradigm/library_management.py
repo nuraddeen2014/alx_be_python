@@ -9,6 +9,9 @@ class Book:
 
     def get_checkout(self):
         return self._is_checked_out
+    
+    def return_book(self):
+        pass
 
 
 class Library:
@@ -38,3 +41,4 @@ class Library:
         available_books = [f"{book.title} by {book.author}" 
                            for book in self._books if not book.get_checkout()]
         return "\n".join(available_books) if available_books else "No books available."
+        
