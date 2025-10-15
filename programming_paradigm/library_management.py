@@ -29,7 +29,7 @@ class Library:
     def return_book(self, title):
         for book in self._books:
             if book.title == title and book.get_checkout():
-                book.set_checkout()
+                book.set_checkout()=True
                 print(f"{book.title} has been returned.")
                 return
         print("Book not found or not checked out.")
